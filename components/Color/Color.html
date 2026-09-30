@@ -1,0 +1,21 @@
+<!-- @dsCard group="1 · Fundamentos" height=760 -->
+<!doctype html>
+<html lang="es"><head><link rel="stylesheet" href="../../colors_and_type.css"><link rel="stylesheet" href="../../_ds_bundle.css"><script src="../../_ds_bundle.js"></script><meta charset="utf-8"><title>Color</title>
+<style>html,body{margin:0}body{padding:16px;background:#e9e9e6;color:#0d0d0d;font-family:Barlow,Arial,sans-serif}.nota{font:500 14px/1.45 Barlow,Arial,sans-serif;color:#333;max-width:900px;margin:0 0 12px}.t{font:700 12px/1 'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#555;margin:18px 0 8px}</style></head>
+<body>
+<div id="r"></div>
+<script>
+
+var S=[['amarillo','#F5C518','Amarillo Motivación','Manual','25%'],['negro','#0D0D0D','Negro Carbón','Manual','60%'],['gris','#2A2A2A','Gris Industrial','Manual','5%'],['blanco','#FFFFFF','Blanco','Manual','10%'],['gris-texto','#B8B8B8','Texto secundario','Propuesta',''],['gris-linea','#4A4A4A','Divisor','Propuesta','']];
+var h='<p class="nota">Paleta del manual y dos tonos de apoyo propuestos. El porcentaje es la proporción <b>global del feed</b>, no de cada pieza.</p><div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px">';
+S.forEach(function(s){h+='<div><div style="height:96px;background:var(--'+s[0]+');border:1px solid #0002"></div><div style="font:700 15px/1.2 Barlow Condensed,Arial;margin-top:6px">'+s[2]+'</div><div style="font:500 13px/1.3 Barlow,Arial;color:#444">'+s[1]+' · <code>'+s[0]+'</code><br>'+s[3]+(s[4]?' · '+s[4]:'')+'</div></div>'});
+h+='</div><div style="display:flex;height:22px;margin:14px 0 4px"><i style="flex:60;background:var(--negro)"></i><i style="flex:25;background:var(--amarillo)"></i><i style="flex:10;background:#fff;border:1px solid #0002"></i><i style="flex:5;background:var(--gris)"></i></div><div class="t" style="margin-top:4px">Proporción global 60 / 25 / 10 / 5</div>';
+var P=[['Blanco sobre negro','blanco','negro','19,4:1',1],['Negro sobre amarillo','negro','amarillo','11,9:1',1],['Amarillo sobre negro','amarillo','negro','11,9:1',1],['Texto sec. sobre negro','gris-texto','negro','9,8:1',1],['Gris sobre amarillo','gris','amarillo','8,8:1',1],['Blanco sobre gris','blanco','gris','14,4:1',1],['Amarillo sobre blanco','amarillo','blanco','1,6:1',0],['Blanco sobre amarillo','blanco','amarillo','1,6:1',0],['Gris sobre negro','gris','negro','1,35:1',0],['Amarillo sobre gris-texto','amarillo','gris-texto','1,2:1',0]];
+h+='<div class="t">Combinaciones aprobadas y a evitar (contraste WCAG)</div><div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px">';
+P.forEach(function(p){h+='<div style="background:var(--'+p[2]+');border:1px solid #0002;padding:14px 12px;min-height:118px;position:relative"><div style="font:400 40px/1 Bebas Neue,Impact;color:var(--'+p[1]+')">Sumate</div><div style="font:600 15px/1.2 Barlow Condensed;color:var(--'+p[1]+')">Entrená a tu ritmo</div><div style="position:absolute;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #0002;padding:5px 8px;font:700 12px/1.2 Barlow Condensed;letter-spacing:.04em;color:#0d0d0d">'+(p[4]?'✔ ':'✘ EVITAR · ')+p[0]+' · '+p[3]+'</div></div>'});
+h+='</div><div class="t">Roles semánticos</div><table style="border-collapse:collapse;font:14px/1.35 Barlow;width:100%"><tr style="text-align:left"><th>Rol</th><th>Línea Oscuro</th><th>Línea Amarillo</th></tr>';
+[['Fondo','negro','amarillo'],['Superficie / panel','gris','negro'],['Texto principal','blanco','negro'],['Texto secundario','gris-texto','gris'],['Acento','amarillo','negro (barra con texto amarillo)'],['Divisor','gris-linea','negro'],['CTA fondo / texto','amarillo / negro','negro / amarillo']].forEach(function(r){h+='<tr style="border-top:1px solid #0002"><td style="padding:5px 8px 5px 0">'+r[0]+'</td><td><code>'+r[1]+'</code></td><td><code>'+r[2]+'</code></td></tr>'});
+h+='</table>';
+document.getElementById('r').innerHTML=h;
+</script>
+</body></html>

@@ -1,0 +1,51 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="es">
+<head><link rel="stylesheet" href="../../colors_and_type.css"><link rel="stylesheet" href="../../_ds_bundle.css"><script src="../../_ds_bundle.js"></script>
+<meta charset="utf-8">
+<title>Motivación Gym</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--negro); color:var(--blanco); font-family:var(--font-texto); overflow:hidden; }
+  .cover { position:relative; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .am { fill:var(--amarillo); } .gr { fill:var(--gris); } .bl { fill:var(--blanco); } .ng { fill:var(--negro); }
+  .words { position:absolute; left:40px; bottom:32px; max-width:440px; }
+  .name { margin:0; font-family:var(--font-display); font-weight:400; font-size:104px; line-height:.92; letter-spacing:.01em; color:var(--blanco); }
+  .tag { margin:10px 0 0 2px; font-family:var(--font-condensada); font-weight:600; font-size:14px; line-height:20px; letter-spacing:.08em; text-transform:uppercase; color:var(--gris-texto); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      amarillo 176 wide slab bled off top and bottom (identity: the franja and campaign line) · gris 120×208 (superficie) · blanco 64×64 once (the 10%) · negro is the ground
+  arrangement one tall yellow slab with a grey satellite, echoing the "oscuro con franja" line; bottoms sit on the esp-6 line
+  pattern     stripes, from "loud, bold, poster type" + barra inclinada: five parallelograms at −14° cut in negro through the slab, esp-3 pitch; plus the logo's barbell bar (two runs, two blocks) along the base
+  scales      sides in esp-1/esp-3 multiples; stripe pitch esp-3 (24); bar height trazo-barra (10); corners radio-0
+-->
+<rect class="gr" x="24" y="56" width="120" height="208"/>
+<rect class="am" x="168" y="-8" width="176" height="304"/>
+<g class="ng">
+<polygon points="216,-8 232,-8 168,248 168,184"/>
+<polygon points="256,-8 272,-8 184,296 168,296 168,280"/>
+<polygon points="296,-8 312,-8 224,296 208,296"/>
+<polygon points="336,-8 344,-8 344,8 264,296 248,296"/>
+<polygon points="344,40 344,104 296,296 288,296"/>
+</g>
+<rect class="bl" x="368" y="200" width="64" height="64"/>
+<rect class="am" x="24" y="264" width="112" height="10"/>
+<rect class="am" x="144" y="264" width="10" height="10"/>
+<rect class="am" x="162" y="264" width="10" height="10"/>
+<rect class="am" x="180" y="264" width="252" height="10"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">Motivación<br>Gym</h1>
+<p class="tag">Siempre Motivados · fitness · musculación · crossfit</p>
+</div>
+</div>
+</body>
+</html>

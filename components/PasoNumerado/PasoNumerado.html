@@ -1,0 +1,12 @@
+<!-- @dsCard group="2 · Componentes" height=520 -->
+<!doctype html>
+<html lang="es"><head><link rel="stylesheet" href="../../colors_and_type.css"><link rel="stylesheet" href="../../_ds_bundle.css"><script src="../../_ds_bundle.js"></script><meta charset="utf-8"><title>PasoNumerado</title>
+<style>html,body{margin:0}body{padding:16px;background:#e9e9e6;color:#0d0d0d;font-family:Barlow,Arial,sans-serif}.nota{font:500 14px/1.45 Barlow,Arial,sans-serif;color:#333;max-width:900px;margin:0 0 12px}.t{font:700 12px/1 'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#555;margin:18px 0 8px}</style></head>
+<body>
+<p class="nota"><b>MG / Componente / Paso numerado</b>. Explica un paso o consejo con un número grande en Bebas Neue. Vista al 45 % sobre las líneas Oscuro y Amarillo.</p><div id="r" style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start"></div>
+<script>
+var r=document.getElementById('r');
+MG.lienzo(r,MG.paso({n:'01',titulo:'Andá de a poco',texto:'Tu cuerpo necesita tiempo para adaptarse. Priorizá la constancia antes que la intensidad.'})+'<div style="height:40px"></div><div class="mg-regla"></div><div style="height:40px"></div>'+MG.paso({n:'02',titulo:'Preguntá siempre',texto:'El staff está para ayudarte con la técnica y el uso de cada equipo.'}),{linea:'oscuro',escala:.45,ancho:1000});
+MG.lienzo(r,MG.paso({n:'01',titulo:'Andá de a poco',texto:'Priorizá la constancia antes que la intensidad.'}),{linea:'amarillo',escala:.45,ancho:1000});
+</script>
+</body></html>

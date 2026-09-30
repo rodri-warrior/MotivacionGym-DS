@@ -1,0 +1,14 @@
+<!-- @dsCard group="1 · Fundamentos" height=560 -->
+<!doctype html>
+<html lang="es"><head><link rel="stylesheet" href="../../colors_and_type.css"><link rel="stylesheet" href="../../_ds_bundle.css"><script src="../../_ds_bundle.js"></script><meta charset="utf-8"><title>Iconografia</title>
+<style>html,body{margin:0}body{padding:16px;background:#e9e9e6;color:#0d0d0d;font-family:Barlow,Arial,sans-serif}.nota{font:500 14px/1.45 Barlow,Arial,sans-serif;color:#333;max-width:900px;margin:0 0 12px}.t{font:700 12px/1 'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#555;margin:18px 0 8px}</style></head>
+<body>
+<p class="nota">Un solo estilo: trazo 4 px en grilla de 48, puntas rectas, esquinas en inglete, sin relleno. Siempre acompañan a un texto.</p><div id="r" style="display:flex;gap:20px;flex-wrap:wrap"></div>
+<script>
+
+var r=document.getElementById('r');
+var g=function(l){return '<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:34px 20px;font-size:84px">'+MG.ICONOS.map(function(n){return '<div style="text-align:center;color:var(--c-acento)">'+MG.icono(n)+'<div class="mg-pie-t" style="color:var(--c-sec);margin-top:10px;font-size:24px">'+n+'</div></div>'}).join('')+'</div>'};
+MG.lienzo(r,g(),{linea:'oscuro',escala:.42,ancho:1000});
+MG.lienzo(r,g(),{linea:'amarillo',escala:.42,ancho:1000});
+</script>
+</body></html>

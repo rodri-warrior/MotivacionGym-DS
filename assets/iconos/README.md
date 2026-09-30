@@ -1,0 +1,1 @@
+Íconos propios de MG: trazo 4 px en grilla de 48, puntas rectas, esquinas en inglete, sin relleno. Los SVG vienen en tinta negra #0D0D0D; para usarlos en amarillo o blanco, cambiá el `stroke` o usá `MG.icono(nombre)`, que toma el color del texto.

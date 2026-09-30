@@ -1,0 +1,16 @@
+<!-- @dsCard group="1 · Fundamentos" height=470 -->
+<!doctype html>
+<html lang="es"><head><link rel="stylesheet" href="../../colors_and_type.css"><link rel="stylesheet" href="../../_ds_bundle.css"><script src="../../_ds_bundle.js"></script><meta charset="utf-8"><title>Logo</title>
+<style>html,body{margin:0}body{padding:16px;background:#e9e9e6;color:#0d0d0d;font-family:Barlow,Arial,sans-serif}.nota{font:500 14px/1.45 Barlow,Arial,sans-serif;color:#333;max-width:900px;margin:0 0 12px}.t{font:700 12px/1 'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#555;margin:18px 0 8px}</style></head>
+<body>
+<p class="nota">Logo vectorizado del PNG original, sin redibujar. Espacio de protección: ¼ de la altura del logo por lado. Ancho en piezas: 150 px (mínimo 120 px).</p><div id="r" style="display:flex;gap:14px;flex-wrap:wrap"></div><div class="t">Evitar</div><div id="x" style="display:flex;gap:14px;flex-wrap:wrap"></div>
+<script>
+
+var r=document.getElementById('r'),x=document.getElementById('x');
+function box(bg,inner,cap,w){return '<div style="width:'+(w||220)+'px"><div style="height:140px;background:'+bg+';display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">'+inner+'</div><div style="font:600 13px/1.3 Barlow Condensed;letter-spacing:.04em;margin-top:6px;text-transform:uppercase">'+cap+'</div></div>'}
+r.innerHTML=box('var(--negro)',MG.logo({ancho:150}),'Blanco sobre negro · principal')+box('var(--amarillo)',MG.logo({ancho:130,color:'var(--negro)'}),'Negro sobre amarillo · discreto')+box('var(--gris)',MG.logo({ancho:150}),'Blanco sobre gris')+
+box('repeating-linear-gradient(135deg,#9a9a9a 0 12px,#bdbdbd 12px 24px)',MG.logo({ancho:130,placa:true}),'Sobre foto: en placa negra')+
+box('var(--negro)','<div style="position:relative;padding:18px;outline:2px dashed #ff2d8a">'+MG.logo({ancho:120})+'</div>','Protección ¼ de la altura');
+x.innerHTML=box('var(--negro)','<div style="transform:scaleX(1.5)">'+MG.logo({ancho:120})+'</div>','✘ Deformar')+box('var(--negro)',MG.logo({ancho:150,color:'#e0463c'}),'✘ Colores fuera de paleta')+box('var(--amarillo)',MG.logo({ancho:150}),'✘ Blanco sobre amarillo')+box('repeating-linear-gradient(135deg,#9a9a9a 0 12px,#e5e5e5 12px 24px)',MG.logo({ancho:150}),'✘ Directo sobre foto')+box('var(--negro)','<div style="filter:drop-shadow(0 0 10px #f5c518);transform:rotate(-12deg)">'+MG.logo({ancho:140})+'</div>','✘ Efectos o rotación');
+</script>
+</body></html>

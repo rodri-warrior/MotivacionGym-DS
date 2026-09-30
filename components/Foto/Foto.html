@@ -1,0 +1,12 @@
+<!-- @dsCard group="2 · Componentes" height=520 -->
+<!doctype html>
+<html lang="es"><head><link rel="stylesheet" href="../../colors_and_type.css"><link rel="stylesheet" href="../../_ds_bundle.css"><script src="../../_ds_bundle.js"></script><meta charset="utf-8"><title>Foto</title>
+<style>html,body{margin:0}body{padding:16px;background:#e9e9e6;color:#0d0d0d;font-family:Barlow,Arial,sans-serif}.nota{font:500 14px/1.45 Barlow,Arial,sans-serif;color:#333;max-width:900px;margin:0 0 12px}.t{font:700 12px/1 'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#555;margin:18px 0 8px}</style></head>
+<body>
+<p class="nota"><b>MG / Componente / Contenedor de fotografía</b>. Encuadra la foto del gym con recorte controlado; si no hay foto, muestra el placeholder con indicación de encuadre o la versión gráfica. Vista al 45 % sobre las líneas Oscuro y Amarillo.</p><div id="r" style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start"></div>
+<script>
+var r=document.getElementById('r');
+MG.lienzo(r,'<div style="display:flex;gap:24px">'+MG.foto({w:460,h:420,guia:'Plano medio, persona entrenando, luz del lugar'})+MG.foto({w:460,h:420,sinFoto:true,palabra:'Fuerza',palabraTam:190})+'</div>',{linea:'oscuro',escala:.45,ancho:1000});
+MG.lienzo(r,MG.foto({w:460,h:300,sinFoto:true,palabra:'Equipo',palabraTam:150}),{linea:'amarillo',escala:.45,ancho:1000});
+</script>
+</body></html>

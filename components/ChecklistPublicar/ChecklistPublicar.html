@@ -1,0 +1,13 @@
+<!-- @dsCard group="5 · Calidad" height=900 -->
+<!doctype html>
+<html lang="es"><head><link rel="stylesheet" href="../../colors_and_type.css"><link rel="stylesheet" href="../../_ds_bundle.css"><script src="../../_ds_bundle.js"></script><meta charset="utf-8"><title>ChecklistPublicar</title>
+<style>html,body{margin:0}body{padding:16px;background:#e9e9e6;color:#0d0d0d;font-family:Barlow,Arial,sans-serif}.nota{font:500 14px/1.45 Barlow,Arial,sans-serif;color:#333;max-width:900px;margin:0 0 12px}.t{font:700 12px/1 'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#555;margin:18px 0 8px}</style></head>
+<body>
+<div id="r"></div>
+<script>
+
+var L=[['Datos reales','No queda ningún [PLACEHOLDER]; horarios, fechas y precios revisados por otra persona.'],['Lectura en teléfono','Vista “Tamaño teléfono”: el título se entiende en 2 segundos, el cuerpo se lee sin zoom.'],['Jerarquía','Un título, un acento (máx. 2 palabras), un CTA.'],['Contraste','Solo combinaciones aprobadas; nada de texto directo sobre foto.'],['Ortografía','Tildes, ¿¡ de apertura y voseo consistente.'],['Tono','Invita, no culpa. Sin promesas de resultados ni consejos médicos.'],['Sin desbordes','Ninguna marca rosa; nada en zonas de interfaz de historias.'],['Foto','Real, con permiso, bien encuadrada; logo en placa sólida.'],['Archivo','1080 × 1350 / 1080 × 1080 / 1080 × 1920 · PNG sRGB · MG_Plantilla_…'],['Pie','Instagram correcto y #siempremotivados discreto; testimonios autorizados o marcados como ficticios.']];
+MG.lienzo(document.getElementById('r'),'<p class="mg-etiqueta-t mg-acento-c">Antes de publicar</p><div style="height:16px"></div><h2 class="mg-display-m">Checklist <span class="mg-acento">MG</span></h2><div style="height:40px"></div>'+MG.listaConsejos(L.map(function(l){return {b:l[0],t:l[1]}}),{numerada:true,tam:'s'}),{linea:'franja',escala:.5,ancho:1080}).firstChild.style.paddingLeft='150px';
+document.querySelector('.mgv-lienzo').insertAdjacentHTML('afterbegin','<div class="mg-franja"><span>#siempremotivados</span></div>');
+</script>
+</body></html>

@@ -1,0 +1,14 @@
+<!-- @dsCard group="1 · Fundamentos" height=620 -->
+<!doctype html>
+<html lang="es"><head><link rel="stylesheet" href="../../colors_and_type.css"><link rel="stylesheet" href="../../_ds_bundle.css"><script src="../../_ds_bundle.js"></script><meta charset="utf-8"><title>Fotografia</title>
+<style>html,body{margin:0}body{padding:16px;background:#e9e9e6;color:#0d0d0d;font-family:Barlow,Arial,sans-serif}.nota{font:500 14px/1.45 Barlow,Arial,sans-serif;color:#333;max-width:900px;margin:0 0 12px}.t{font:700 12px/1 'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#555;margin:18px 0 8px}</style></head>
+<body>
+<p class="nota">Cada plantilla con foto tiene su equivalente <b>sin foto</b>. Las piezas muestran el placeholder [FOTO DEL GYM] con la indicación de encuadre: no hay fotos de socios ni instalaciones inventadas.</p><div id="r" class="mgv-fila"></div><div id="c" style="margin-top:14px;font:14px/1.5 Barlow;display:grid;grid-template-columns:1fr 1fr;gap:6px 30px;max-width:980px"></div>
+<script>
+
+var r=document.getElementById('r');
+[['actividad',true,'Con foto'],['actividad',false,'Sin foto (equivalente)'],['staff',true,'Con foto · retrato'],['staff',false,'Sin foto'],['evento',true,'Foto a sangre + velo']].forEach(function(c){r.innerHTML+='<div class="mgv-item">'+MG.escalar(MG.render(c[0],'v',{conFoto:c[1]}),.2,'v')+'<div class="mgv-nom">'+c[2]+'</div></div>'});
+MG.listo(r);
+document.getElementById('c').innerHTML=['<b>Encuadre:</b> plano medio o general en acción; retratos de medio cuerpo; detalles (manos, barra, zapatillas).','<b>Iluminación:</b> la del lugar, pareja; evitá contraluces fuertes y flash directo.','<b>Recorte:</b> sujeto en el tercio que queda libre de texto; nunca cortar cabezas ni manos a la altura de la articulación.','<b>Tratamiento:</b> natural (+4 % contraste). B/N solo sobre la línea Amarillo. Sin filtros de color, viñetas ni HDR.','<b>Texto:</b> en panel sólido o sobre el velo inferior. El logo, en placa negra.','<b>Personas:</b> comunidad real, diversa en edades y cuerpos, con permiso. Nada de fotos de stock presentadas como el gym.'].map(function(t){return '<div>'+t+'</div>'}).join('');
+</script>
+</body></html>

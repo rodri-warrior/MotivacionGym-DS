@@ -1,0 +1,12 @@
+<!-- @dsCard group="3 · Plantillas · Informativo" height=760 -->
+<!doctype html>
+<html lang="es"><head><link rel="stylesheet" href="../../colors_and_type.css"><link rel="stylesheet" href="../../_ds_bundle.css"><script src="../../_ds_bundle.js"></script><meta charset="utf-8"><title>P02Feriado</title>
+<style>html,body{margin:0}body{padding:16px;background:#e9e9e6;color:#0d0d0d;font-family:Barlow,Arial,sans-serif}.nota{font:500 14px/1.45 Barlow,Arial,sans-serif;color:#333;max-width:900px;margin:0 0 12px}.t{font:700 12px/1 'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#555;margin:18px 0 8px}</style></head>
+<body>
+<p class="nota" id="n"></p><div id="r" class="mgv"></div>
+<script>
+var t=MG.PLANTILLAS['feriado'];
+document.getElementById('n').innerHTML='<b>MG / Plantilla / '+t.nombre+'</b> · '+t.familia+'. Línea recomendada: '+MG.LINEAS[t.linea].nombre+' (★). Usá los botones para ver cada formato, línea y variante; 100 % muestra la pieza a tamaño real.';
+MG.vitrina(document.getElementById('r'),{id:'feriado'});
+</script>
+</body></html>

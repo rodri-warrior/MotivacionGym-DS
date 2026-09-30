@@ -1,0 +1,13 @@
+<!-- @dsCard group="4 · Ejemplos aplicados" height=1300 -->
+<!doctype html>
+<html lang="es"><head><link rel="stylesheet" href="../../colors_and_type.css"><link rel="stylesheet" href="../../_ds_bundle.css"><script src="../../_ds_bundle.js"></script><meta charset="utf-8"><title>EjemplosAplicados</title>
+<style>html,body{margin:0}body{padding:16px;background:#e9e9e6;color:#0d0d0d;font-family:Barlow,Arial,sans-serif}.nota{font:500 14px/1.45 Barlow,Arial,sans-serif;color:#333;max-width:900px;margin:0 0 12px}.t{font:700 12px/1 'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#555;margin:18px 0 8px}</style></head>
+<body>
+<p class="nota"><b>Ejemplos aplicados.</b> Cada familia con contenido de muestra en Feed vertical, al 25 %. Los marcados con ● son los casos de validación del brief. Todo dato entre corchetes es un placeholder: no hay precios, horarios, personas ni testimonios reales.</p><div id="r" class="mgv-fila"></div>
+<script>
+var r=document.getElementById('r');
+var casos=[['visita','● TU PRIMER DÍA EMPIEZA ACÁ',{}],['actividad','● CONOCÉ MUSCULACIÓN',{}],['horarios','● HORARIOS DE LA SEMANA',{}],['feriado','● ESTE FERIADO, CONSULTÁ NUESTRO HORARIO',{}],['motivacional','● CADA ENTRENAMIENTO SUMA',{}],['promo','Propuesta comercial',{}],['evento','Desafío de comunidad',{}],['consejo','Consejo de entrenamiento',{}],['staff','Presentación del staff',{}],['testimonio','Testimonio (ficticio)',{}],['normas','Normas de convivencia',{}],['consejo','Mito / realidad',{variante:'mito'}]];
+r.innerHTML=casos.map(function(c){return '<div class="mgv-item">'+MG.escalar(MG.render(c[0],'v',c[2]),.25,'v')+'<div class="mgv-nom">'+c[1]+'<br>'+MG.esc(MG.nombreSistema(c[0],'v'))+'</div></div>'}).join('');
+MG.listo(r);
+</script>
+</body></html>

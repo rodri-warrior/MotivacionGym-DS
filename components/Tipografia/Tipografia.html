@@ -1,0 +1,19 @@
+<!-- @dsCard group="1 · Fundamentos" height=900 -->
+<!doctype html>
+<html lang="es"><head><link rel="stylesheet" href="../../colors_and_type.css"><link rel="stylesheet" href="../../_ds_bundle.css"><script src="../../_ds_bundle.js"></script><meta charset="utf-8"><title>Tipografia</title>
+<style>html,body{margin:0}body{padding:16px;background:#e9e9e6;color:#0d0d0d;font-family:Barlow,Arial,sans-serif}.nota{font:500 14px/1.45 Barlow,Arial,sans-serif;color:#333;max-width:900px;margin:0 0 12px}.t{font:700 12px/1 'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#555;margin:18px 0 8px}</style></head>
+<body>
+<p class="nota">Escala para piezas de 1080 px de ancho. Cada muestra está al tamaño con que se ve en un teléfono: la pieza de 1080 px ocupa ~390 px de pantalla (36 %). Si un texto no entra, se acorta o se divide: no se sigue achicando.</p><div id="r"></div>
+<script>
+
+var E=[['display-xl','mg-display-xl','200 px · 0,88 · +0,5 %','Campaña, portadas · máx. 3 líneas','CADA DÍA SUMA'],['display-l','mg-display-l','148 px · 0,90 · +1 %','Título 4:5 y 9:16 · máx. 34 car.','CONOCÉ MUSCULACIÓN'],['display-m','mg-display-m','112 px · 0,92 · +1 %','Informativo y 1:1 · máx. 30 car.','HORARIOS DE LA SEMANA'],['display-s','mg-display-s','76 px · 0,96 · +1,5 %','Cuadrado denso, tarjetas','NORMAS DE CONVIVENCIA'],['bajada','mg-bajada','Barlow Condensed 600 · 46 px · 1,12','Bajada · máx. 90 car.','Entrená fuerza a tu ritmo, con acompañamiento.'],['dato-clave','mg-dato-xl','Barlow Condensed 700 · 88 px · 1,0','Fecha u hora protagonista','[FECHA] · 07:00'],['dato','mg-dato','Barlow Condensed 600 · 52 px · 1,05','Valores de datos · máx. 22 car.','Todos los niveles'],['etiqueta','mg-etiqueta-t','Barlow Condensed 700 · 30 px · +12 %','Etiquetas y rótulos, MAYÚSCULAS','CROSSFIT · HORARIOS'],['cuerpo','mg-cuerpo','Barlow 400 · 38 px · 1,34','Texto · máx. 4 líneas / 170 car.','Dedicá unos minutos a moverte suave antes de entrenar.'],['cuerpo-s','mg-cuerpo-s','Barlow 400 · 32 px · 1,35','Cuerpo en 1:1 y tarjetas','Ropa cómoda, zapatillas, agua y toalla.'],['pie','mg-pie-t','Barlow Condensed 600 · 28 px · +6 %','Pie y contacto','@[INSTAGRAM]   #siempremotivados'],['legal','mg-legal','Barlow 400 · 26 px · 1,3 · PISO','Solo letra chica','Condiciones: [CONDICIONES].']];
+var r=document.getElementById('r');
+E.forEach(function(e){
+  var row=document.createElement('div');row.style.cssText='display:grid;grid-template-columns:230px 1fr;gap:16px;align-items:center;border-top:1px solid #0002;padding:8px 0';
+  row.innerHTML='<div><div style="font:700 15px/1.2 Barlow Condensed">'+e[0]+'</div><div style="font:13px/1.35 Barlow;color:#444">'+e[2]+'<br>'+e[3]+'</div></div><div class="a"></div>';
+  r.appendChild(row);
+  var h='<p class="'+e[1]+'" style="white-space:nowrap">'+MG.tx(e[4])+'</p>';
+  var w=MG.lienzo(row.querySelector('.a'),h,{linea:'oscuro',escala:390/1080,ancho:1080});w.firstChild.style.padding='16px 30px';
+});
+</script>
+</body></html>

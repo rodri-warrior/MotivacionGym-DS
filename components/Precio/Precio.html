@@ -1,0 +1,12 @@
+<!-- @dsCard group="2 · Componentes" height=520 -->
+<!doctype html>
+<html lang="es"><head><link rel="stylesheet" href="../../colors_and_type.css"><link rel="stylesheet" href="../../_ds_bundle.css"><script src="../../_ds_bundle.js"></script><meta charset="utf-8"><title>Precio</title>
+<style>html,body{margin:0}body{padding:16px;background:#e9e9e6;color:#0d0d0d;font-family:Barlow,Arial,sans-serif}.nota{font:500 14px/1.45 Barlow,Arial,sans-serif;color:#333;max-width:900px;margin:0 0 12px}.t{font:700 12px/1 'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#555;margin:18px 0 8px}</style></head>
+<body>
+<p class="nota"><b>MG / Componente / Precio, condición y vigencia</b>. Bloque opcional con valor, condición y vigencia, siempre en panel sólido. Vista al 45 % sobre las líneas Oscuro y Amarillo.</p><div id="r" style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start"></div>
+<script>
+var r=document.getElementById('r');
+MG.lienzo(r,'<div style="max-width:520px">'+MG.precio({rotulo:'Valor',precio:'[PRECIO]',condicion:'[CONDICIONES]',vigencia:'Hasta [VIGENCIA]'})+'</div>',{linea:'oscuro',escala:.45,ancho:1000});
+MG.lienzo(r,'<div style="max-width:520px">'+MG.precio({rotulo:'Valor',precio:'[PRECIO]',condicion:'[CONDICIONES]',vigencia:'Hasta [VIGENCIA]'})+'</div>',{linea:'amarillo',escala:.45,ancho:1000});
+</script>
+</body></html>

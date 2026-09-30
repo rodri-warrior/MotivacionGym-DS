@@ -1,0 +1,24 @@
+<!-- @dsCard group="5 · Calidad" height=900 -->
+<!doctype html>
+<html lang="es"><head><link rel="stylesheet" href="../../colors_and_type.css"><link rel="stylesheet" href="../../_ds_bundle.css"><script src="../../_ds_bundle.js"></script><meta charset="utf-8"><title>CorrectoIncorrecto</title>
+<style>html,body{margin:0}body{padding:16px;background:#e9e9e6;color:#0d0d0d;font-family:Barlow,Arial,sans-serif}.nota{font:500 14px/1.45 Barlow,Arial,sans-serif;color:#333;max-width:900px;margin:0 0 12px}.t{font:700 12px/1 'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#555;margin:18px 0 8px}.x-malo{--c-fondo:#fff!important;--c-texto:#f5c518!important;--c-sec:#f5c518!important;--c-acento:#f5c518!important;--c-chip-bg:#fff!important;--c-chip-tx:#f5c518!important}.x-malo .mg-panel,.x-malo .mg-acento{--c-superficie:#fff!important;background:#fff!important;--c-texto:#f5c518!important;--c-sec:#f5c518!important;--c-acento:#f5c518!important;color:#f5c518!important}</style></head>
+<body>
+<p class="nota"><b>Usos correctos e incorrectos.</b> Cada par muestra la regla aplicada (✔) y el error típico (✘). Al 20 %.</p><div id="r" style="display:grid;grid-template-columns:repeat(3,auto);gap:22px 34px;justify-content:start"></div>
+<script>
+
+var r=document.getElementById('r');
+function par(t,ok,mal,f){f=f||'v';return '<div><div class="t" style="margin-top:0">'+t+'</div><div style="display:flex;gap:10px"><div class="mgv-item">'+MG.escalar(ok,.2,f)+'<div class="mgv-nom">✔ Correcto</div></div><div class="mgv-item">'+MG.escalar(mal,.2,f)+'<div class="mgv-nom">✘ Incorrecto</div></div></div></div>'}
+var fer=MG.render('feriado','v');
+var act=MG.render('actividad','v');
+var mot=MG.render('motivacional','v');
+var hor=MG.render('horarios','v',{datos:{titulo:'Horarios de la *semana*'}});
+r.innerHTML=
+par('Contraste',fer,fer.replace('mg--amarillo"','mg--amarillo x-malo"'))+
+par('Texto largo',act,MG.render('actividad','v',{datos:{bajada:'Entrená fuerza a tu ritmo, con acompañamiento del staff desde el primer día, con rutinas personalizadas, seguimiento, planes, horarios amplios y mucho más para que no te falte nada en tu camino.'}}).replace('mg-tit__baj mg-cuerpo','mg-tit__baj mg-cuerpo" style="font-size:22px'))+
+par('Logo sobre foto',act,act.replace(/<div class="mg-logo" style="width:\d+px;padding:\d+px;background:var\(--negro\)">/,'<div class="mg-logo" style="width:150px">').replace('mg-foto__ph" style="','mg-foto__ph" style="background:#d9d9d9;'))+
+par('Saturación',mot,mot.replace('<div class="mg__in">','<div class="mg-barra-mov" style="left:700px;top:0;width:90px;height:1350px;background:#0d0d0d"></div><div class="mg-barra-mov" style="left:860px;top:0;width:40px;height:1350px;background:#0d0d0d"></div><div class="mg-trama" style="position:absolute;inset:0;opacity:.6"></div><div class="mg__in">').replace('<header class="mg-enc">','<header class="mg-enc">'+MG.etiqueta('Nuevo')+MG.etiqueta({texto:'¡Hot!',estilo:'inclinada'})))+
+par('Voz',mot,MG.render('motivacional','v',{datos:{titulo:'No hay\n*excusas*',bajada:'Sin dolor no hay ganancia. Quemá lo que comiste el finde.'}}))+
+par('Adaptar a historia',MG.render('horarios','h'),'<div class="mg mg--h mg--oscuro"><div style="transform:scaleY(1.422);transform-origin:0 0">'+hor+'</div></div>','h');
+MG.listo(r);
+</script>
+</body></html>

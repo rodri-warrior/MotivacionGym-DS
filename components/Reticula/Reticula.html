@@ -1,0 +1,19 @@
+<!-- @dsCard group="1 · Fundamentos" height=680 -->
+<!doctype html>
+<html lang="es"><head><link rel="stylesheet" href="../../colors_and_type.css"><link rel="stylesheet" href="../../_ds_bundle.css"><script src="../../_ds_bundle.js"></script><meta charset="utf-8"><title>Reticula</title>
+<style>html,body{margin:0}body{padding:16px;background:#e9e9e6;color:#0d0d0d;font-family:Barlow,Arial,sans-serif}.nota{font:500 14px/1.45 Barlow,Arial,sans-serif;color:#333;max-width:900px;margin:0 0 12px}.t{font:700 12px/1 'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#555;margin:18px 0 8px}</style></head>
+<body>
+<p class="nota">Márgenes de composición (rosa continuo), retícula de 6 columnas y, en historia, zonas de interfaz (rayado) y recorte 4:5 de la vista previa (línea de trazos). Al 30 %.</p><div id="r" class="mgv-fila"></div>
+<script>
+
+var F=[['v',[80,80,72,80]],['s',[64,72,60,72]],['h',[288,80,340,80]]],r=document.getElementById('r');
+F.forEach(function(f){
+  var k=f[0],m=f[1],FM=MG.FORMATOS[k],cols='';
+  var w=1080-m[1]-m[3],cw=(w-5*24)/6;
+  for(var i=0;i<6;i++)cols+='<div style="position:absolute;top:'+m[0]+'px;bottom:'+m[2]+'px;left:'+(m[3]+i*(cw+24))+'px;width:'+cw+'px;background:#f5c51822"></div>';
+  var z=k==='h'?'<div class="mg-zonas" style="top:0;height:250px">ZONA DE INTERFAZ 250 PX</div><div class="mg-zonas" style="bottom:0;height:340px">ZONA DE INTERFAZ 340 PX</div><div style="position:absolute;left:0;right:0;top:285px;border-top:4px dashed #ff2d8a"></div><div style="position:absolute;left:0;right:0;bottom:285px;border-top:4px dashed #ff2d8a"></div>':'';
+  var html='<div class="mg mg--'+k+' mg--oscuro">'+cols+'<div style="position:absolute;inset:'+m.join('px ')+'px;border:4px solid #ff2d8a"></div>'+z+'<div class="mg__in" style="inset:'+m.join('px ')+'px"><p class="mg-etiqueta-t mg-acento-c">'+FM.nombre+'</p><p class="mg-display-m" style="margin-top:20px">'+FM.w+' × '+FM.h+'</p><p class="mg-cuerpo mg-sec" style="margin-top:20px">Márgenes '+m.join(' / ')+' px<br>6 columnas · medianil 24 px</p></div></div>';
+  var d=document.createElement('div');d.className='mgv-item';d.innerHTML=MG.escalar(html,.3,k)+'<div class="mgv-nom">'+FM.nombre+'</div>';r.appendChild(d);
+});
+</script>
+</body></html>
